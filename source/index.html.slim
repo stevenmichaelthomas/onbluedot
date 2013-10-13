@@ -5,7 +5,33 @@ title: Welcome to Middleman
 - content_for :stylesheets, stylesheet_link_tag('pages/index')
 - content_for :javascripts, javascript_include_tag('index')
 
-h1 Abby Heggtveit
+section.hero
+  .container
+    h1 Blue Dot Design
+    h2 Web and Design consulting from a powerful husband and wife duo
+
+- data.people.each do |person|
+  section.about class=person.name.dasherize
+    .container
+      h4 = person.name
+      p = person.description
+
+section.projects
+  .container
+    h3 Projects
+    .project-images
+      - data.projects.each do |project|
+        .project-image
+          = project.name
+          = image_tag(project.image)
+
+section.contact
+  .container
+    h3 CONTACT US
+    p PUT THA FORM HERE
+
+
+
 
 / .index-carousel.carousel
 /   .carousel-images
