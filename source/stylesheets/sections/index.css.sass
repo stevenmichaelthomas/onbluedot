@@ -1,0 +1,48 @@
+@import "../setup/**/*"
+@import url(http://fonts.googleapis.com/css?family=Kite+One)
+
+.intro
+  text-align: center
+  margin-top: 140px
+
+.intro-text
+  font-size: 36px
+  line-height: 55px
+  margin-bottom: 140px
+
+.white-logo
+  margin-bottom: 60px
+
+.projects
+  text-align: center
+
+.small-projects-logo
+  margin-top: 70px
+  margin-bottom: 70px
+
+.project
+  +span-columns(4, 12)
+  +nth-omega(3n)
+  position: relative
+
+  &.omega
+    margin-right: 0
+
+  &:hover
+    .project-name
+      display: none
+
+.project-name
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 220px
+  height: 220px
+  line-height: 220px
+  vertical-align: middle
+  margin-left: -110px
+  margin-top: -110px
+  background: rgba(white, 0.5)
+
+.contact
+  text-align: center

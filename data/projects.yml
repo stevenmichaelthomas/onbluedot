@@ -1,4 +1,12 @@
 -
   name: Maclean's
-  image_thumb: whatever_thumb.png
+  image_thumb: http://placehold.it/220x220
+  image: whatever.png
+-
+  name: Maclean's
+  image_thumb: http://placehold.it/220x220
+  image: whatever.png
+-
+  name: Maclean's
+  image_thumb: http://placehold.it/220x220
   image: whatever.png
