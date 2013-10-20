@@ -1,0 +1,82 @@
+.carousel-nav
+  position: absolute
+  left: 0
+  right: 0
+  font-size: 0
+  z-index: 10
+  display: block
+  text-align: center
+
+.carousel-nav-item
+  color: #f1f1f1
+  font-size: 35px
+  padding: 4px
+  cursor: pointer
+  display: inline-block
+
+.carousel-nav-item:hover
+  text-decoration: none
+
+.carousel-nav-item.active
+  color: #CCC
+
+.carousel-arrow
+  position: absolute
+  top: 50%
+  z-index: 10
+  opacity: 0.2
+  padding: 50px 0
+  margin-top: -50px
+
+.carousel-arrow.dark
+  opacity: 0.4
+
+.carousel-arrow:hover,
+.carousel-arrow.dark:hover
+  opacity: 1.0
+
+.carousel-arrow-left
+  +inline-background-image-retina("arrow_left_mobile.png")
+  left: 5px
+
+.carousel-arrow-right
+  +inline-background-image-retina("arrow_right_mobile.png")
+  right: 5px
+
+@media only screen and (min-width: 321px) and (orientation: landscape)
+  .carousel-nav
+    display: none
+
++at-breakpoint($break-tablet)
+
+  .carousel-nav
+    display: block
+
+  .carousel-arrow
+    margin-top: -50px
+    padding: 50px
+
+  .carousel-arrow-left
+    +inline-background-image-retina("arrow_left.png")
+    left: 0
+
+  .carousel-arrow-right
+    +inline-background-image-retina("arrow_right.png")
+    right: 0
+
++at-breakpoint($break-desktop)
+
+  .carousel-nav
+    display: block
+
+  .carousel-arrow
+    margin-top: -50px
+    padding: 50px
+
+  .carousel-arrow-left
+    +inline-background-image-retina("arrow_left.png")
+    left: 15px
+
+  .carousel-arrow-right
+    +inline-background-image-retina("arrow_right.png")
+    right: 15px

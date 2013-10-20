@@ -1,4 +1,5 @@
 - content_for :stylesheets, stylesheet_link_tag("sections/index")
+- content_for :javascripts, javascript_include_tag('index')
 
 section.intro
   .container
@@ -7,48 +8,48 @@ section.intro
 
 section.squircles
   .container
-    | SQUIRCLES
+    = image_tag "icon-research.png"
+    = image_tag "icon-design.png"
+    = image_tag "icon-develop.png"
+    = image_tag "icon-consult.png"
 
 
 section.projects
-  .small-projects-logo = image_tag "http://placehold.it/100x100", alt: "Featured Projects"
-  .container
-    - data.projects.each do |project|
-      .project
-        = image_tag project.image_thumb
-        .project-name = project.name
+  .small-projects-logo PROJECTS LOGO
 
-/ .index-carousel.carousel
-/   .carousel-images
-/     - data.projects.each_with_index do |project, index|
-/       - if project.frontpage
-/         .index-carousel-item{:class => project.name == data.projects.first.name && "selected", :data => {:state => index}}
-/           .index-carousel-item-wrapper
-/             %section.index-carousel-content
-/               %h1.index-carousel-title=project.title
-/               %p.index-carousel-description=project.description
-/               = link_to "Learn More <span class='index-carousel-desktop'>about #{project.name}</span>", '#', :class => "index-carousel-link"
-/             .index-carousel-overlay
-/             .index-carousel-background
-/               / TODO: Add proper videos
-/               / %video.index-carousel-video(autoplay loop muted)
-/               /   %source{src: image_path("projects/#{project.video}")}
-/               %img.index-carousel-placeholder{src: image_path("projects/#{project.image}")}
+  .index-carousel.carousel
+    .carousel-images
+      - data.projects.each_with_index do |project, index|
+        .index-carousel-item data-state=index
+          .index-carousel-item-wrapper
+            section.index-carousel-content
+              h1.index-carousel-title = project.title
+              p.index-carousel-description = project.description
 
-/   .carousel-arrows
-/     = link_to " ", "#", :class => "carousel-arrow carousel-arrow-left"
-/     = link_to " ", "#", :class => "carousel-arrow carousel-arrow-right"
+            .index-carousel-overlay
+            .index-carousel-background
+              = image_tag "projects/#{project.image}", class: "index-carousel-placeholder"
 
-/   %nav.index-carousel-nav.carousel-nav
-/     - data.projects.each_with_index do |project, index|
-/       - if project.frontpage
-/         - attributes = {:state => index}
-/         - classname = (project.name == data.projects.first.name) && "selected"
-/         %a.carousel-nav-item{:class => classname,:data => attributes} &bull;
+    .carousel-arrows
+      = link_to " ", "#", class: "carousel-arrow carousel-arrow-left"
+      = link_to " ", "#", class: "carousel-arrow carousel-arrow-right"
+
+    nav.index-carousel-nav.carousel-nav
+      - data.projects.each_with_index do |project, index|
+        - classname = (project.name == data.projects.first.name) && "selected"
+        a.carousel-nav-item class=classname data-state=index &bull;
 
 section.contact
   .container
-    | CONTACT
+    h3 Contact
+    input type="text" placeholder="Name"
+    input type="text" placeholder="Email"
+    textarea placeholder="Questions, comments, inquiries, etc."
+    br
+    br
+    br
+    br
+
 
 
 

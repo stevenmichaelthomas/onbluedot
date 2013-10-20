@@ -1,12 +1,16 @@
 -
-  name: Maclean's
-  image_thumb: http://placehold.it/220x220
-  image: whatever.png
+  title: Maclean's
+  description: "Front-end and platform development. Reached number 1 in Canada's app store."
+  image: macleans.png
 -
-  name: Maclean's
-  image_thumb: http://placehold.it/220x220
-  image: whatever.png
+  title: Canadian Business
+  description: "Front-end and platform development. Number 1 in Canada's app store."
+  image: canadian_business.png
 -
-  name: Maclean's
-  image_thumb: http://placehold.it/220x220
-  image: whatever.png
+  title: Vetter
+  description: "Full-stack design and development. 2nd place at Taipei's Startup Weekend."
+  image: vetter.png
+-
+  title: Brotips
+  description: "Redesign and development, resulting in an increase to more than 2 million monthly visitors."
+  image: brotips.png
