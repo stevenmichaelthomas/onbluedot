@@ -1,0 +1,27 @@
+-
+  image: "icon-research.png"
+  header: Research
+  text:
+    - Data collection
+    - Analysis
+    - Presentation
+
+-
+  image: "icon-design.png"
+  header: Design
+  text:
+    - Forward-thinking
+    - Pixel-perfect interfaces
+
+-
+  image: "icon-develop.png"
+  header: Develop
+  text:
+    - Rock-solid
+    - User-aware code
+
+-
+  image: "icon-consult.png"
+  header: Consult
+  text:
+    - Technical project management

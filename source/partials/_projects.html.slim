@@ -1,0 +1,24 @@
+section.projects
+  h2 What we've done
+  .container
+    .index-carousel.carousel
+      .carousel-images
+        - data.projects.each_with_index do |project, index|
+          .index-carousel-item data-state=index
+            .index-carousel-item-wrapper
+              section.index-carousel-content
+
+                / p.index-carousel-description = project.description
+
+              .index-carousel-overlay
+              .index-carousel-background
+                = image_tag "projects/#{project.image}", class: "index-carousel-placeholder"
+
+      .carousel-arrows
+        = link_to " ", "#", class: "carousel-arrow carousel-arrow-left"
+        = link_to " ", "#", class: "carousel-arrow carousel-arrow-right"
+
+      nav.index-carousel-nav.carousel-nav
+        - data.projects.each_with_index do |project, index|
+          - classname = (project.name == data.projects.first.name) && "selected"
+          a.carousel-nav-item class=classname data-state=index &bull;

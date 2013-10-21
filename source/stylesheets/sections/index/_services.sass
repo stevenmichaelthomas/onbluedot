@@ -1,0 +1,36 @@
+.service
+  img
+    width: 125px
+    height: 125px
+    margin-bottom: 8px
+
+  .service-header
+    font-family: $allerta
+    font-weight: bold
+
+  .service-text
+
+  .service
+    +nth-omega(last)
+
+
++at-breakpoint($break-mobile)
+  .service
+    +span-columns(6)
+
++at-breakpoint($break-tablet)
+  .services-wrapper
+    padding-left: space(2, 8)
+
+  .service
+    +span-columns(2, 6)
+
++at-breakpoint($break-desktop)
+  .services-wrapper
+    padding-left: space(2, 12)
+    padding-right: space(2, 12)
+
+  .service
+    +span-columns(2, 8)
+    +nth-omega(last)
+

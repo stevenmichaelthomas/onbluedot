@@ -1,16 +1,16 @@
 -
   title: Maclean's
-  description: "Front-end and platform development. Reached number 1 in Canada's app store."
+  description: "This project reimagined a century-old magazine and brought it to the iPhone for the first time. Maclean's consistenly ranks among the top apps in Canada'a App Store."
   image: macleans.png
 -
   title: Canadian Business
-  description: "Front-end and platform development. Number 1 in Canada's app store."
+  description: "We consulted with Rogers Publishing to develop their iPhone platform. Our front-end development helped the app reach the number 1 spot in Canada's App Store."
   image: canadian_business.png
 -
   title: Vetter
-  description: "Full-stack design and development. 2nd place at Taipei's Startup Weekend."
+  description: "We provided the Vetter team with full-stack research, design and development. Vetter features a clean and user-friendly design, and it continues to connect and engage employees across the globe."
   image: vetter.png
 -
   title: Brotips
-  description: "Redesign and development, resulting in an increase to more than 2 million monthly visitors."
+  description: "This redesign and development project had us collaborating closely with the Brotips team. The end-product resulted in an increase to more than 2 million visitors per month."
   image: brotips.png

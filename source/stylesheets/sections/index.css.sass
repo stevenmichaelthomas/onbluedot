@@ -1,173 +1,67 @@
 @import "../setup/**/*"
-@import url(http://fonts.googleapis.com/css?family=Kite+One)
+@import "index/**/*"
 
-.intro
+.hero
   text-align: center
-  margin-top: 140px
 
-.intro-text
-  font-size: 36px
-  line-height: 55px
-  margin-bottom: 140px
+.hero-wrapper
+  position: absolute
+  top: 50%
+  margin-top: -144px
+  width: 100%
 
-.white-logo
+.hero-logo
+  font-family: $logo-font
+  font-size: 72px
   margin-bottom: 60px
+  position: relative
+
+  &:after
+    display: inline
+    margin-left: 4px
+    font-size: 100px
+    content: "."
+    color: #0ac2ff
+
+.hero-nav
+  padding-top: 28px
+  padding-bottom: 28px
+  background: #F4F6F8
+
+  > a
+    color: rgba(#333, 0.6)
+    text-decoration: none
+    margin: 0 14px
+    text-transform: uppercase
+
+    &:hover
+      color: rgba(#333, 1.0)
+      border-bottom: 1px solid $blue-dot
+
+.hero-text
+  font-size: 32px
+  line-height: 48px
+  margin-bottom: 100px
+
+.hero-scroll-button
+  position: absolute
+  bottom: 20px
+  width: 100%
 
 .projects
   text-align: center
   margin-bottom: 60px
 
-.small-projects-logo
-  margin-top: 70px
-  margin-bottom: 70px
+  > h2
+    margin-top: 70px
+    margin-bottom: 70px
+
+.services
+  text-align: center
+  background: #F4F6F8
+  padding: 140px 0
 
 .contact
   text-align: center
 
-.squircles
-  text-align: center
-
-  img
-    margin: 0 16px
-
-.index-carousel
-  position: relative
-  background: #000
-
-.index-carousel .carousel-arrow
-  margin-top: -50px
-
-.index-carousel .carousel-nav-item
-  +animation(bounceInUp 600ms linear)
-
-.index-carousel-item
-  opacity: 0
-  visibility: hidden
-  z-index: -1
-
-.index-carousel-item-wrapper
-  display: none
-
-.index-carousel-item.active
-  opacity: 1
-  visibility: visible
-  z-index: 10
-  height: 100%
-  +transition(opacity 900ms ease)
-
-  .index-carousel-item-wrapper
-    display: table
-    position: relative
-    height: 100%
-    margin: 0 auto
-
-.index-carousel-background
-  z-index: 1
-  max-width: 100%
-  max-height: 500px
-  overflow: hidden
-
-.index-carousel-placeholder
-  display: block
-  margin: 0 auto
-  max-width: 100%
-  height: auto
-  position: relative
-  z-index: 0
-
-.index-carousel-video
-  display: none
-
-.index-carousel-overlay
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 2
-
-// [data-state="0"] .index-carousel-overlay
-//   background: -webkit-linear-gradient(45deg, #5b1225 12%, #2f3d58 59%, #252b4a 100%)
-//   opacity: 0.85
-
-// [data-state="1"] .index-carousel-overlay
-//   background: -webkit-linear-gradient(45deg, #075265 12%, #63bfaf 100%)
-//   opacity: 0.85
-
-.index-carousel-content
-  z-index: 10
-  width: 100%
-  text-align: left
-
-.index-carousel-title
-  margin: 0 auto 8px auto
-  color: black
-  font-size: 1.6em
-  font-weight: 400
-  line-height: 1.2
-  position: absolute
-  top: -45px
-
-.index-carousel-description
-  font-size: 1em
-  color: black
-  font-weight: 300
-  margin: 0 auto 10px auto
-  position: absolute
-  right: 0
-  top: -35px
-
-.index-carousel-link
-  display: inline-block
-  word-wrap: normal
-  font-size: 1em
-  font-weight: 600
-  line-height: 1.4em
-  color: rgba(white, 0.8)
-  border-bottom: 1px dotted rgba(white, 0.2)
-
-.index-carousel-desktop
-  display: none
-
-+at-breakpoint($break-mobile)
-  .navigation-open .index-carousel-content
-    opacity: 0.1
-
-+at-breakpoint($break-tablet)
-  .index-carousel-title
-    font-size: 2.0em
-    font-weight: 200
-    line-height: 1
-    margin-bottom: 16px
-
-  .index-carousel-description
-    font-size: 1.125em
-    margin-bottom: 15px
-
-  .index-carousel-content
-    max-width: 100%
-
-  .index-carousel
-    .carousel-arrow
-      margin-top: -50px
-
-+at-breakpoint($break-desktop)
-  .index-carousel-title
-    font-size: 2.0
-    font-weight: 200
-    line-height: 1
-    margin-bottom: 16px
-
-  .index-carousel-desktop
-    display: inline-block
-
-  .index-carousel-description
-    font-size: 1.125em
-    margin-bottom: 15px
-
-  .index-carousel-content
-    max-width: 100%
-
-  .index-carousel
-    .carousel-arrow
-      margin-top: -50px
 

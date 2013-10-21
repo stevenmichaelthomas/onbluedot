@@ -11,10 +11,11 @@
     @content
 
 @mixin input
-  //+user-select(text)
+  display: block
+  +user-select(text)
   +appearance(none)
   +box-sizing(border-box)
-  +border-radius($input-border-radius)
+  +border-radius(3px)
   +background-image(linear-gradient(#f4f4f4 0%, #ffffff 100%))
   +box-shadow($input-inset-shadow, 0 1px 0 rgba(white, 0.5))
   height: $input-height
@@ -24,15 +25,6 @@
   font-size: 14px
   line-height: $input-height - 12px
   border: 1px solid $input-border-color
-
-  &:focus, &.focus
-    @extend .input-focus
-
-  &.error, .with-errors &
-    @extend .input-error
-
-  &[disabled], &.disabled
-    @extend .input-disabled
 
   +placeholder
     color: $input-placeholder-color
@@ -45,7 +37,7 @@
 input,
 textarea,
 select
-  font: $font-family
+  font: $open-sans
   font-size: 1em
 
 input[type="text"],

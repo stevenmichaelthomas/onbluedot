@@ -1,5 +1,6 @@
 @import "setup/**/*"
 @import "components/**/*"
++global-reset
 
 *
   +box-sizing(border-box)
@@ -33,7 +34,7 @@ $layouts: $break-mobile, $break-tablet, $break-desktop
 // ----------------------------------------------------------------------------
 
 body
-  font-family: $font-family
+  font-family: $open-sans
   font-size: 16px
   line-height: 1.4em
   -webkit-font-smoothing: antialiased
@@ -47,6 +48,10 @@ h1
   color: $header-color
 
 h2
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 24px
+  margin-bottom: 1em
   color: $header-color
 
 h3
