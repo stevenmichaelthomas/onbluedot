@@ -1,0 +1,60 @@
+.service
+  img
+    width: 125px
+    height: 125px
+    margin-bottom: 8px
+
+  .service-header
+    font-family: $allerta
+    font-weight: bold
+
+  .service-text
+
+  .service
+    +nth-omega(last)
+
+
++at-breakpoint($break-mobile)
+  .service
+    +span-columns(6)
+
++at-breakpoint($break-tablet)
+  .services-wrapper
+    padding-left: space(2, 8)
+
+  .service
+    +span-columns(2, 6)
+
++at-breakpoint($break-desktop)
+  .services-wrapper
+    padding-left: space(2, 12)
+    padding-right: space(2, 12)
+
+  .service
+    +span-columns(2, 8)
+    +nth-omega(last)
+
+
+
+.service
+  -webkit-animation-name: welcome
+  -webkit-animation-duration: .9s
+
+@-webkit-keyframes welcome
+  from
+    -webkit-transform: scale(0)
+    opacity: 0
+
+  50%
+    -webkit-transform: scale(0)
+    opacity: 0
+
+  82.5%
+    -webkit-transform: scale(1.1)
+    -webkit-animation-timing-function: ease-out
+    opacity: 1
+
+  to
+    -webkit-transform: scale(1)
+
+
