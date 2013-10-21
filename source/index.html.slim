@@ -2,15 +2,14 @@
 - content_for :javascripts, javascript_include_tag('index')
 
 section.hero
-  .hero-nav
-    = link_to "Our work", "#"
-    = link_to "Get in touch", "#"
-  .hero-wrapper
-    .container
+  // .hero-nav
+  //   .container
+  //     = link_to "Get in touch", "#"
+
+  .container
+    .hero-wrapper
       .hero-logo onbluedot
       .hero-text = data.index.intro_text
-
-  .hero-scroll-button ▼
 
 = partial "partials/services"
 = partial "partials/projects"

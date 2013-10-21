@@ -1,9 +1,14 @@
 .index-carousel
   position: relative
   background: black
+  +box-shadow(0px 2px 7px rgba(black, 0.6))
+  +border-radius(5px)
 
 .index-carousel .carousel-arrow
   margin-top: -50px
+
+.index-carousel-nav
+  margin-top: 28px
 
 .index-carousel .carousel-nav-item
   +animation(bounceInUp 600ms linear)
@@ -22,6 +27,8 @@
   z-index: 10
   height: 100%
   +transition(opacity 900ms ease)
+  +border-radius(5px)
+  overflow: hidden
 
   .index-carousel-item-wrapper
     display: table

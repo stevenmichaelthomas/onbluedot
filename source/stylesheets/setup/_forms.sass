@@ -16,19 +16,23 @@
   +appearance(none)
   +box-sizing(border-box)
   +border-radius(3px)
-  +background-image(linear-gradient(#f4f4f4 0%, #ffffff 100%))
   +box-shadow($input-inset-shadow, 0 1px 0 rgba(white, 0.5))
   height: $input-height
-  margin: 0
+  margin: 0 0 14px 0
   padding: $input-padding
   color: $input-color
   font-size: 14px
   line-height: $input-height - 12px
-  border: 1px solid $input-border-color
+  border: 0px solid $input-border-color
+  width: 100%
+
+  &:focus, &.focus
+    outline: none
+    border: none
+    +box-shadow(none)
 
   +placeholder
-    color: $input-placeholder-color
-    font-style: italic
+    color: $blue-dot
 
 //-----------------------------------------------------------------------------
 // Inputs & Selects
@@ -39,6 +43,7 @@ textarea,
 select
   font: $open-sans
   font-size: 1em
+  resize: none
 
 input[type="text"],
 input[type="search"],
@@ -50,3 +55,20 @@ input[type="tel"],
 textarea,
 .input,
   +input
+
+.button
+  +box-sizing(border-box)
+  margin: 0
+  padding: 6px 10px
+  width: 100%
+  font: $open-sans
+  font-size: 14px
+  font-weight: bold
+  color: white
+  text-align: center
+  -webkit-font-smoothing: antialiased
+  cursor: pointer
+  border: 0
+  +border-radius(3px)
+  background-color: $blue-dot
+  +box-shadow(0 0 0 #000)
