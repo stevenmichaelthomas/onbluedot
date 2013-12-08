@@ -41,7 +41,7 @@
 input,
 textarea,
 select
-  font: $open-sans
+  font: $primary-font-family
   font-size: 1em
   resize: none
 
@@ -56,12 +56,18 @@ textarea,
 .input,
   +input
 
+input[type="submit"]
+  @extend .button
+
+textarea
+  height: 120px
+
 .button
   +box-sizing(border-box)
   margin: 0
   padding: 6px 10px
   width: 100%
-  font: $open-sans
+  font: $primary-font-family
   font-size: 14px
   font-weight: bold
   color: white

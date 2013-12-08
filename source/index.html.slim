@@ -2,15 +2,57 @@
 - content_for :javascripts, javascript_include_tag('index')
 
 section.hero
-  // .hero-nav
-  //   .container
-  //     = link_to "Get in touch", "#"
-
   .container
     .hero-wrapper
       .hero-logo onbluedot
       .hero-text = data.index.intro_text
 
-= partial "partials/services"
-= partial "partials/projects"
-= partial "partials/contact"
+section.services
+  .container
+    h2 What we do
+    .services-wrapper
+      - data.services.each do |service|
+        .service
+          = image_tag service.image
+          h3.service-header = service.header
+          / ul.service-text
+          /   - for text in service.text
+          /     li = text
+
+section.projects
+  h2 What we've done
+  .container
+    .index-carousel.carousel
+      .carousel-images
+        - data.projects.each_with_index do |project, index|
+          .index-carousel-item data-state=index
+            .index-carousel-item-wrapper
+              section.index-carousel-content
+
+                / p.index-carousel-description = project.description
+
+              .index-carousel-overlay
+              .index-carousel-background
+                = image_tag "projects/#{project.image}", class: "index-carousel-placeholder"
+
+      .carousel-arrows
+        = link_to " ", "#", class: "carousel-arrow carousel-arrow-left"
+        = link_to " ", "#", class: "carousel-arrow carousel-arrow-right"
+
+      nav.index-carousel-nav.carousel-nav
+        - data.projects.each_with_index do |project, index|
+          - classname = (project.name == data.projects.first.name) && "selected"
+          a.carousel-nav-item class=classname data-state=index &bull;
+
+section.contact
+  .container
+    h2 Get in Touch
+
+    = form_tag "/contact", method: 'post', class: "contact-form", id: "contact-form" do
+      = field_set_tag do
+        = text_field_tag :name, placeholder: "Name", required: true
+        = email_field_tag :email, placeholder: "Email", required: true
+        = text_area_tag :message, placeholder: "Tell us about your project", required: true
+
+      = field_set_tag do
+        = submit_tag "Send Message"

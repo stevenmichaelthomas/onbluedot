@@ -5,7 +5,7 @@
     margin-bottom: 8px
 
   .service-header
-    font-family: $allerta
+    font-family: $secondary-font-family
     font-weight: bold
 
   .service-text
@@ -33,28 +33,3 @@
   .service
     +span-columns(2, 8)
     +nth-omega(last)
-
-
-
-.service
-  -webkit-animation-name: welcome
-  -webkit-animation-duration: .9s
-
-@-webkit-keyframes welcome
-  from
-    -webkit-transform: scale(0)
-    opacity: 0
-
-  50%
-    -webkit-transform: scale(0)
-    opacity: 0
-
-  82.5%
-    -webkit-transform: scale(1.1)
-    -webkit-animation-timing-function: ease-out
-    opacity: 1
-
-  to
-    -webkit-transform: scale(1)
-
-
