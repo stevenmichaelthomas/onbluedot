@@ -1,62 +1,58 @@
----
-title: Welcome to Middleman
----
-
-- content_for :stylesheets, stylesheet_link_tag('pages/index')
+- content_for :stylesheets, stylesheet_link_tag("sections/index")
 - content_for :javascripts, javascript_include_tag('index')
 
 section.hero
   .container
-    h1 Blue Dot Design
-    h2 Web and Design consulting from a powerful husband and wife duo
+    .hero-wrapper
+      .hero-logo onbluedot
+      .hero-text = data.index.intro_text
 
-- data.people.each do |person|
-  section.about class=person.name.dasherize
-    .container
-      h4 = person.name
-      p = person.description
+section.services
+  .container
+    h2 What we do
+    .services-wrapper
+      - data.services.each do |service|
+        .service
+          = image_tag service.image
+          h3.service-header = service.header
+          / ul.service-text
+          /   - for text in service.text
+          /     li = text
 
 section.projects
+  h2 What we've done
   .container
-    h3 Projects
-    .project-images
-      - data.projects.each do |project|
-        .project-image
-          = project.name
-          = image_tag(project.image)
+    .index-carousel.carousel
+      .carousel-images
+        - data.projects.each_with_index do |project, index|
+          .index-carousel-item data-state=index
+            .index-carousel-item-wrapper
+              section.index-carousel-content
+
+                / p.index-carousel-description = project.description
+
+              .index-carousel-overlay
+              .index-carousel-background
+                = image_tag "projects/#{project.image}", class: "index-carousel-placeholder"
+
+      .carousel-arrows
+        = link_to " ", "#", class: "carousel-arrow carousel-arrow-left"
+        = link_to " ", "#", class: "carousel-arrow carousel-arrow-right"
+
+      nav.index-carousel-nav.carousel-nav
+        - data.projects.each_with_index do |project, index|
+          - classname = (project.name == data.projects.first.name) && "selected"
+          a.carousel-nav-item class=classname data-state=index &bull;
 
 section.contact
   .container
-    h3 CONTACT US
-    p PUT THA FORM HERE
+    h2 Get in Touch
 
+    = form_tag "/contact", method: 'post', class: "contact-form", id: "contact-form" do
+      = field_set_tag do
+        = text_field_tag :name, placeholder: "Name", required: true
+        = email_field_tag :email, placeholder: "Email", required: true
+        = text_area_tag :message, placeholder: "Tell us about your project", required: true
 
-
-
-/ .index-carousel.carousel
-/   .carousel-images
-/     - data.projects.each_with_index do |project, index|
-/       - if project.frontpage
-/         .index-carousel-item{:class => project.name == data.projects.first.name && "selected", :data => {:state => index}}
-/           .index-carousel-item-wrapper
-/             %section.index-carousel-content
-/               %h1.index-carousel-title=project.title
-/               %p.index-carousel-description=project.description
-/               = link_to "Learn More <span class='index-carousel-desktop'>about #{project.name}</span>", '#', :class => "index-carousel-link"
-/             .index-carousel-overlay
-/             .index-carousel-background
-/               / TODO: Add proper videos
-/               / %video.index-carousel-video(autoplay loop muted)
-/               /   %source{src: image_path("projects/#{project.video}")}
-/               %img.index-carousel-placeholder{src: image_path("projects/#{project.image}")}
-
-/   .carousel-arrows
-/     = link_to " ", "#", :class => "carousel-arrow carousel-arrow-left"
-/     = link_to " ", "#", :class => "carousel-arrow carousel-arrow-right"
-
-/   %nav.index-carousel-nav.carousel-nav
-/     - data.projects.each_with_index do |project, index|
-/       - if project.frontpage
-/         - attributes = {:state => index}
-/         - classname = (project.name == data.projects.first.name) && "selected"
-/         %a.carousel-nav-item{:class => classname,:data => attributes} &bull;
+      = field_set_tag do
+        = submit_tag "Send Message"

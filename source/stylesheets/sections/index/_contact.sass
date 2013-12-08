@@ -1,0 +1,18 @@
+.contact-form
+  > textarea
+    height: 80px
+
++at-breakpoint($break-mobile)
+  padding: 0
+
++at-breakpoint($break-tablet)
+  .contact-form
+    +span-columns(4, 4)
+    padding-left: space(2, 8)
+    padding-right: space(2, 8)
+
++at-breakpoint($break-desktop)
+  .contact-form
+    +span-columns(6, 6)
+    padding-left: space(3, 12)
+    padding-right: space(3, 12)

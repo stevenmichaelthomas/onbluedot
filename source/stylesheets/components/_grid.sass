@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------------------
+// Global Grid Styles
+// ----------------------------------------------------------------------------
+
+.container
+  // Include `container` if this element will contain a grid system.
+  @include container($total-columns)
+  // Apply our grid background stripes for development.
+  @include susy-grid-background
+
+// Automatically reset the grid width & re-apply the grid background
+// to responsive layouts.
+$layouts: $break-mobile, $break-tablet, $break-desktop
+@each $layout in $layouts
+  @include at-breakpoint($layout)
+    .container
+      @include set-container-width
+      @include susy-grid-background
+
+.content
+  background: white
+  position: relative
+  z-index: 0
