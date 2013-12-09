@@ -11,10 +11,22 @@ html
     = yield_content(:stylesheets)
     = javascript_include_tag 'lib/modernizr'
 
-    - if !build?
-      = javascript_include_tag 'lib/holder'
+    javascript:
+      WebFontConfig = {
+        google: { families: [ 'Lato:100,300,400:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
 
   body
+    = partial "partials/header"
     = yield
 
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
