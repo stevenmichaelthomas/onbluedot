@@ -42,3 +42,9 @@ configure :build do
   # activate :minify_css
   activate :minify_javascript
 end
+
+
+activate :fjords do |fjords|
+  fjords.username = ENV['FJORDS_USERNAME']
+  fjords.password = ENV['FJORDS_PASSWORD']
+end

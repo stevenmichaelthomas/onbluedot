@@ -1,0 +1,47 @@
+.person
+  +span-columns(6, 6)
+  margin-bottom: $content-spacing * 2
+
+  > h3
+    text-align: center
+
+  > p
+    text-align: center
+
+  > .person-icon
+    width: 128px
+    height: 128px
+    margin: 0 auto $content-spacing * 2
+    text-align: center
+    border: 3px solid $blue-background
+    background: $blue-background
+    +border-radius(64px)
+
+    > i
+      line-height: 122px
+      color: #FFF
+      font-size: 64px
+
+.about-text
+  text-align: center
+  font-size: 1.25em
+  +span-columns(6, 6)
+
++at-breakpoint($break-tablet)
+  .person
+    +span-columns(6, 12)
+    padding-left: space(1, 12)
+    margin-bottom: 0
+
+    > h3
+
+    > p
+      text-align: left
+
+    &.right
+      +span-columns(6 omega, 12)
+      padding-right: space(1, 12)
+      padding-left: 0
+
+  .about-text
+    margin-top: $content-spacing * 2

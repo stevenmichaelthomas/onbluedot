@@ -26,8 +26,9 @@ html
       })();
 
   body
-    = partial "partials/header"
-    = yield
+    #main
+      = partial "partials/header"
+      = yield
 
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
     = javascript_include_tag  "site"

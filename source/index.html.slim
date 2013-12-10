@@ -6,7 +6,7 @@ section.hero
     .hero-wrapper
       .hero-text = data.index.intro_text
 
-section.site-section.services
+section.site-section.services#services
   h2.section-header Services
   .container
     - data.services.each do |service| 
@@ -15,7 +15,7 @@ section.site-section.services
         h3 = service.header
         p = service.text
 
-section.site-section.projects
+section.site-section.projects#work
   h2.section-header Our work
   .container
     - data.projects.each_with_index do |project, i|
@@ -26,12 +26,17 @@ section.site-section.projects
           = project.text
 
 
-section.site-section.about
+section.site-section.about#about
   h2.section-header About us
   .container
+    - data.about.people.each_with_index do |human, i|
+      .person class="#{"right" if i == 1}"
+        .person-icon: i class=human.icon
+        h3 = human.name
     
+    .about-text: p= data.about.text
 
-section.site-section.contact
+section.site-section.contact#contact
   h2.section-header Contact
   .container
     .contact-text

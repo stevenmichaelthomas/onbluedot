@@ -1,6 +1,7 @@
 @import "../setup/**/*"
 @import "index_carousel"
 @import "services"
+@import "about"
 @import "contact"
 
 .site-section
@@ -28,7 +29,14 @@
     border-bottom: 1px solid $blue-border
 
 .services
-  padding: $section-padding + 40 0 0
+  padding: $section-padding + 50 0 0
+
+  > .container
+    padding-bottom: $section-padding
+    border-bottom: 1px solid $blue-border
+
+.about 
+  padding: $section-padding + 50 0 0
 
   > .container
     padding-bottom: $section-padding

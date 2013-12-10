@@ -1,2 +1,5 @@
+#= require sticky_spy
+
 $ ->
-	$('textarea').autosize()
+  $('textarea').autosize()
+  $("body").stickySpy()
