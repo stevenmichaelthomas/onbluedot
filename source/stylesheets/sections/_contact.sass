@@ -1,0 +1,30 @@
+.contact-form
+  padding: 0
+
+.contact-text
+  text-align: center
+  +span-columns(6 omega, 6)
+  margin-bottom: $content-spacing * 2
+
++at-breakpoint($break-tablet)
+  .contact-text
+    +span-columns(5, 5)
+    padding-left: space(1, 8)
+    padding-right: space(1, 8)
+
+  .contact-form
+    +span-columns(5, 5)
+    padding-left: space(1, 8)
+    padding-right: space(1, 8)
+
++at-breakpoint($break-desktop)
+  .contact-text
+    text-align: center
+    +span-columns(6, 6)
+    padding-left: space(3, 12)
+    padding-right: space(3, 12)
+
+  .contact-form
+    +span-columns(6, 6)
+    padding-left: space(3, 12)
+    padding-right: space(3, 12)

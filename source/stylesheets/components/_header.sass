@@ -1,10 +1,12 @@
 .site-header
-  position: absolute
+  position: fixed
   left: 0
   top: 0
   width: 100%
   height: $header-height
   line-height: $header-height
+  background: $blue-background
+  z-index: 10
 
 #logo
   float: left
@@ -23,3 +25,7 @@
 
     &:last-child
       padding-right: 0
+
++at-breakpoint($break-mobile)
+  .header-nav
+    display: none

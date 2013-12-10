@@ -1,0 +1,24 @@
+.service
+  +span-columns(6, 6)
+  padding: 0 $content-spacing
+  margin-bottom: $content-spacing * 2
+  text-align: center
+
+  > .service-icon
+    width: 128px
+    height: 128px
+    margin: 0 auto $content-spacing * 2
+    text-align: center
+    border: 3px solid $blue-background
+    +border-radius(64px)
+
+    > i
+      line-height: 122px
+      color: $blue-background
+      font-size: 64px
+
++at-breakpoint($break-tablet)
+  .service
+    +span-columns(4, 12)
+    +nth-omega(3)
+    margin-bottom: 0

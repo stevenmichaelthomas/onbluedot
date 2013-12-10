@@ -1,0 +1,44 @@
+.project  
+  text-align: center
+  border-bottom: 1px solid $blue-border
+  +clearfix
+  padding: $section-padding 0
+
+  &:first-child
+    padding-top: 0
+
+  &:last-child
+    border-bottom: none
+
+  .project-image
+    +span-columns(6, 6)
+    margin-bottom: $content-spacing * 2
+
+    > img
+      max-width: 100%
+
+  .project-text
+    +span-columns(6, 6)
+
++at-breakpoint($break-tablet)
+  .project
+
+    .project-image
+      +span-columns(7, 12)
+
+    .project-text
+      +span-columns(5 omega, 12)
+      padding-right: $content-spacing * 2
+      padding-top: $content-spacing * 2
+      text-align: left
+
+      
+
+    &.flipped
+      .project-image
+        +span-columns(7 omega, 12)
+      
+      .project-text
+        +span-columns(5, 12)
+        padding-left: $content-spacing * 2
+        padding-right: 0

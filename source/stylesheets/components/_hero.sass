@@ -1,10 +1,20 @@
 .hero
-  padding-top: 272px
+  padding-top: 272px - 110
+  height: $hero-height - 100
   background: $blue-background
-  height: $hero-height
 
 .hero-text
   font-size: 1.75em
   line-height: 1
   color: #FFF
   text-transform: uppercase
+
++at-breakpoint($break-tablet)
+  .hero
+    padding-top: 272px - 40
+    height: $hero-height - 50
+
++at-breakpoint($break-desktop)
+  .hero
+    padding-top: 272px
+    height: $hero-height

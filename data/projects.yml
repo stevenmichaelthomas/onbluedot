@@ -1,16 +1,12 @@
+- 
+  header: "Rogers Publishing"
+  text: "<p>Rogers needed to bring their print magazines to multiple devices.</p><p>We developed a platform that redefined their digital publishing process, seamlessly delivering content to web and mobile devices.</p> "
+  image: projects/rogers.png
 -
-  title: Maclean's
-  description: "This project reimagined a century-old magazine and brought it to the iPhone for the first time. Maclean's consistenly ranks among the top apps in Canada'a App Store."
-  image: macleans.png
+  header: Brotips
+  text: "<p>Brotips wanted a new look and more web exposure.</p> <p>Our front-end revamp and ad integration not only gave them new revenue, it helped boost viewership to more than 500,000 unique visitors per month.</p>"
+  image: projects/brotips.png
 -
-  title: Canadian Business
-  description: "We consulted with Rogers Publishing to develop their iPhone platform. Our front-end development helped the app reach the number 1 spot in Canada's App Store."
-  image: canadian_business.png
--
-  title: Vetter
-  description: "We provided the Vetter team with full-stack research, design and development. Vetter features a clean and user-friendly design, and it continues to connect and engage employees across the globe."
-  image: vetter.png
--
-  title: Brotips
-  description: "This redesign and development project had us collaborating closely with the Brotips team. The end-product resulted in an increase to more than 2 million visitors per month."
-  image: brotips.png
+  header: Vetter
+  text: "<p>When Vetter wanted to create an idea management system, we gave them a full-stack solution.</p> <p>From design to development our software continues to bring Vetter to enterprises across the globe.</p>"
+  image: projects/vetter.png

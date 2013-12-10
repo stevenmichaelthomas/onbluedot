@@ -1,13 +1,51 @@
 @import "../setup/**/*"
-@import "index/**/*"
+@import "index_carousel"
+@import "services"
+@import "contact"
+
+.site-section
+  position: relative
+  overflow: hidden
+
+  h3
+    font-size: 1.5em
+    line-height: 1.3
+    font-family: $primary-font-family
+    font-weight: bold
+    color: $text-color-red
+    text-transform: uppercase
+    margin-bottom: $content-spacing
+
+  p
+    font-size: 1.2em
+    line-height: 1.5
+    margin-bottom: 0.6em
 
 .projects
-  padding: $section-padding 0
+  padding: $section-padding + 50 0 0
+
+  > .container
+    border-bottom: 1px solid $blue-border
 
 .services
-  padding: $section-padding 0
+  padding: $section-padding + 40 0 0
+
+  > .container
+    padding-bottom: $section-padding
+    border-bottom: 1px solid $blue-border
 
 .contact
-  padding: $section-padding 0
+  padding: $section-padding + 40 0
 
-
+.section-header
+  position: absolute
+  top: -25px
+  left: 50%
+  width: 200px
+  height: 100px
+  margin-left: -100px
+  padding-top: 44px
+  text-align: center
+  background: $blue-border
+  +border-radius(0 0 100px 100px)
+  color: white

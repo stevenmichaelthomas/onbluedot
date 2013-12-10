@@ -6,19 +6,48 @@ section.hero
     .hero-wrapper
       .hero-text = data.index.intro_text
 
-section.services
+section.site-section.services
+  h2.section-header Services
   .container
+    - data.services.each do |service| 
+      .service
+        .service-icon: i class=service.icon
+        h3 = service.header
+        p = service.text
 
-section.projects
+section.site-section.projects
+  h2.section-header Our work
   .container
-    - data.projects.each do |project|
-      .project
-        .project-image
+    - data.projects.each_with_index do |project, i|
+      .project class="#{"flipped" if i % 2 != 0}"
+        .project-image = image_tag project.image
         .project-text
+          h3 = project.header
+          = project.text
 
 
-section.about
+section.site-section.about
+  h2.section-header About us
   .container
+    
 
-section.contact
+section.site-section.contact
+  h2.section-header Contact
   .container
+    .contact-text
+      h3 Interested in working with us?
+      p Tell us a little bit about your project and we'll get back to you in a few hours.
+
+    = form_tag '/contact', method: 'post', class: 'contact-form active animate', id: 'contact-form-simple' do
+      = content_tag :label do
+        = text_field_tag :name, placeholder: 'Name', required: true
+
+      = content_tag :label do
+        = email_field_tag :email, placeholder: 'Email', required: true
+
+      = content_tag :label do
+        = text_area_tag :comments, placeholder: 'Message', required: true
+
+      = field_set_tag do
+        = submit_tag "Send Message"
+    
