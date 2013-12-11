@@ -5,6 +5,7 @@ class @StickySpy extends Exo.Widget
 
   events:
     "click .header-nav a": "_scrollToItem"
+    "click #logo": "_scrollToTop"
 
   constructor: ->
     super
