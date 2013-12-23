@@ -31,7 +31,7 @@ section.site-section.about#about
   .container
     - data.about.people.each_with_index do |human, i|
       .person class="#{"right" if i == 1}"
-        .person-icon: i class=human.icon
+        .person-icon= image_tag human.avatar
         h3 = human.name
     
     .about-text: p= data.about.text
@@ -51,7 +51,7 @@ section.site-section.contact#contact
         = email_field_tag :email, placeholder: 'Email', required: true
 
       = content_tag :label do
-        = text_area_tag :comments, placeholder: 'Message', required: true
+        = text_area_tag :message, placeholder: 'Message', required: true
 
       = field_set_tag do
         = submit_tag "Send Message"

@@ -1,10 +1,10 @@
 people: 
   -
-    icon: "icon-man"
+    avatar: "steve.png"
     name: Steven Thomas
 
   - 
-    icon: "icon-woman"
+    avatar: "nadia.png"
     name: Nadia Alam
 
 text: "Nadia is a designer.<br/>Steve is a developer.<br/>Together they help businesses grow."
