@@ -9,7 +9,7 @@ section.hero
 section.site-section.services#services
   h2.section-header Services
   .container
-    - data.services.each do |service| 
+    - data.services.each do |service|
       .service
         .service-icon: i class=service.icon
         h3 = service.header
@@ -33,8 +33,9 @@ section.site-section.about#about
       .person class="#{"right" if i == 1}"
         .person-icon= image_tag human.avatar
         h3 = human.name
-    
-    .about-text: p= data.about.text
+        p = human.text
+
+    .about-text = data.about.text
 
 section.site-section.contact#contact
   h2.section-header Contact
@@ -55,4 +56,4 @@ section.site-section.contact#contact
 
       = field_set_tag do
         = submit_tag "Send Message"
-    
+
