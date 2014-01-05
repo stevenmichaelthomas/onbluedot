@@ -6,6 +6,25 @@
   +span-columns(6 omega, 6)
   margin-bottom: $content-spacing * 2
 
+#contact
+  &.success
+    .contact-text, .contact-form
+      display: none
+
+    #contact-form-success
+      display: block
+
+#contact-form-success
+  display: none
+  width: 100%
+  padding: 16px 16px 12px
+  text-align: center
+  border: 1px solid $blue-border
+  clear: both
+
+  > h3
+    color: $blue-background
+
 +at-breakpoint($break-tablet)
   .contact-text
     +span-columns(5, 5)
@@ -16,6 +35,11 @@
     +span-columns(5, 5)
     padding-left: space(1, 8)
     padding-right: space(1, 8)
+
+  #contact-form-success
+    width: 50%
+    margin: 0 auto
+
 
 +at-breakpoint($break-desktop)
   .contact-text

@@ -2,20 +2,19 @@
   padding-top: 272px - 110
   height: $hero-height - 100
   background: $blue-background
+  background-repeat: repeat-x
   +image-background("stars3.png")
   -webkit-animation: stars 30000s infinite alternate linear
-  background-repeat: repeat-x
 
 .blue-dot
-  +image-background("planet.png")
-  -webkit-animation: earth 1250s infinite alternate linear
   background-repeat: no-repeat
   height: $hero-height - 100
   position: absolute
   top: 100px
   width: 100%
   +opacity(0.6)
-
+  +image-background("planet.png")
+  -webkit-animation: earth 1250s infinite alternate linear
 
 .hero-text
   font-size: 1.75em

@@ -21,7 +21,6 @@
     height: 320px
     border-radius: 160px
 
-
     > img
       max-width: 100%
       color: #FFF
@@ -50,3 +49,12 @@
 
   .about-text
     margin-top: $content-spacing * 2
+
++at-breakpoint($break-mobile)
+  .person
+    margin-top: 360px
+    > .person-icon
+      position: absolute
+      top: -360px
+      left: 50%
+      margin-left: -160px

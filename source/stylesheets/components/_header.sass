@@ -18,6 +18,7 @@
 
 .header-nav
   float: right
+  display: none
 
   > a
     color: #FFF
@@ -28,6 +29,6 @@
     &.active
       border-bottom: 1px solid #FFF
 
-+at-breakpoint($break-mobile)
++at-breakpoint($break-tablet)
   .header-nav
-    display: none
+    display: block
