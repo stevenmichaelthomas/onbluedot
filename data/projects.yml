@@ -2,11 +2,14 @@
   header: "Rogers Publishing"
   text: "<p>Rogers needed to bring their print magazines to multiple devices.</p><p>We developed a platform that redefined their digital publishing process, seamlessly delivering content to web and mobile devices.</p> "
   image: projects/rogershands.png
+  klass: "rogers"
 -
   header: Brotips
   text: "<p>Brotips wanted a new look and more web exposure.</p> <p>Our front-end revamp and ad integration not only gave them new revenue, it helped boost viewership to more than 500,000 unique visitors per month.</p>"
   image: projects/brotipshands.png
+  klass: "brotips"
 -
   header: Vetter
-  text: "<p>When Vetter wanted to create an idea management system, we gave them a full-stack solution.</p> <p>From design to development our software continues to bring Vetter to enterprises across the globe.</p>"
+  text: "<p>When Vetter wanted to create an idea management system, we gave them a full-stack solution.</p> <p>From design to development our work continues to bring Vetter to enterprises across the globe.</p>"
   image: projects/vetterhands.png
+  klass: "vetter"

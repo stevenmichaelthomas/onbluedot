@@ -1,11 +1,11 @@
 people:
   -
-    avatar: "steve.png"
+    avatar: "steve@2x.png"
     name: Steven Thomas
     text: "Steve writes clean, scalable code. He has built software for early-stage startups, Fortune 500 companies, and everyone in between."
 
   -
-    avatar: "nadia.png"
+    avatar: "nadia@2x.png"
     name: Nadia Alam
     text: "Nadia hails from one of North America’s top art & design schools. She breathes life into clean and beautiful interfaces."
 
