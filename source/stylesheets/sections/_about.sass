@@ -15,7 +15,7 @@
     text-align: center
     background-color: #F0F6FB
     +image-background("stars2.png")
-    -webkit-animation: alpha-and-omega 20000s infinite alternate linear
+    -webkit-animation: stars 30000s infinite alternate linear
     background-size: 690px 418px
     width: 320px
     height: 320px
@@ -44,6 +44,9 @@
     &.right
       +span-columns(6 omega, 12)
       padding-left: 0
+
+      > .person-icon
+        -webkit-animation: stars 24000s infinite alternate linear
 
   .about-text
     margin-top: $content-spacing * 2
