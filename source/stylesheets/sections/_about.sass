@@ -1,33 +1,31 @@
 .person
   +span-columns(6, 6)
   margin-bottom: $content-spacing * 2
+  position: relative
 
   > h3
     text-align: center
 
   > p
-    padding: 0 60px
     font-size: 1.25em
+    text-align: center
 
   > .person-icon
-    width: 320px
-    height: 320px
-    padding: 32px
     margin: 0 auto $content-spacing * 2
     text-align: center
-    border: 3px solid $blue-border
-
-    +border-radius(160px)
+    +image-background("stars.png")
+    -webkit-animation: alpha-and-omega 19000s infinite alternate linear
+    background-size: 690px 418px
 
     > img
-      max-height: 256px
+      max-width: 100%
       color: #FFF
-      font-size: 64px
 
 .about-text
   +span-columns(6, 6)
   text-align: center
   font-size: 1.25em
+  line-height: 1.4
   color: $text-color-light
 
 +at-breakpoint($break-tablet)
@@ -36,7 +34,7 @@
     margin-bottom: 0
 
     > p
-      text-align: left
+      padding: 0 60px
 
     &.right
       +span-columns(6 omega, 12)

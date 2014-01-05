@@ -2,6 +2,9 @@
   padding-top: 272px - 110
   height: $hero-height - 100
   background: $blue-background
+  +image-background("stars.png")
+  -webkit-animation: alpha-and-omega 19000s infinite alternate linear
+  background-size: 690px 418px
 
 .hero-text
   font-size: 1.75em
@@ -18,3 +21,12 @@
   .hero
     padding-top: 272px
     height: $hero-height
+
+
+@-webkit-keyframes alpha-and-omega
+  0%
+    background-position: 0% 0%
+  50%
+    background-position: 300000px 0%
+  100%
+    background-position: 0px 0%
