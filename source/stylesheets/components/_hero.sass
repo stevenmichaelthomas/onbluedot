@@ -3,8 +3,14 @@
   height: $hero-height - 100
   background: $blue-background
   background-repeat: repeat-x
-  +image-background("stars3.png")
-  -webkit-animation: stars 60000s infinite alternate linear
+
+#stars
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: $hero-height
 
 .blue-dot
   background-repeat: no-repeat
@@ -13,8 +19,6 @@
   top: 100px
   width: 100%
   +opacity(0.6)
-  +image-background("planet.png")
-  -webkit-animation: earth 1250s infinite alternate linear
 
 .hero-text
   font-size: 1.75em

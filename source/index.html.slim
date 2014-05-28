@@ -1,8 +1,8 @@
 - content_for :stylesheets, stylesheet_link_tag("sections/index")
 - content_for :javascripts, javascript_include_tag('index')
 
-.blue-dot
 section.hero
+  #stars
   .container
     .hero-wrapper
       .hero-text = data.index.intro_text
@@ -60,5 +60,5 @@ section.site-section.contact#contact
 
     #contact-form-success
       h3 Thanks
-      p We'll respond to your message as soon as we can. 
+      p We'll respond to your message as soon as we can.
 
