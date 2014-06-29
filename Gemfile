@@ -9,3 +9,6 @@ gem 'slim'
 gem "middleman", "~>3.1.4"
 gem "middleman-livereload", "~> 3.1.0"
 gem "middleman-fjords"
+gem 'middleman-sync'
+gem 'middleman-cloudfront'
+gem 'middleman-dotenv'

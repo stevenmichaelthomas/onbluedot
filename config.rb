@@ -4,6 +4,7 @@ require 'animation'
 require 'slim'
 
 activate :livereload
+activate :dotenv
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -16,35 +17,29 @@ set :fonts_dir, 'fonts'
 # end
 
 
-###
-# Helpers
-###
-
-helpers do
-  # Holder.js image placeholder helper
-  def image_placeholder_tag(opts = {})
-    return "Missing Image Dimension(s)" unless opts[:width] && opts[:height]
-    return "Invalid Image Dimension(s)" unless opts[:width].to_s =~ /^\d+$/ && opts[:height].to_s =~ /^\d+$/
-
-    img  = "<img data-src=\"holder.js/#{opts[:width]}x#{opts[:height]}/auto"
-    img << "/#{opts[:bgcolor]}:#{opts[:fgcolor]}" if opts[:fgcolor] && opts[:bgcolor]
-    img << "/text:#{opts[:text].gsub(/'/,"\'")}" if opts[:text]
-    img << "\" width=\"#{opts[:width]}\" height=\"#{opts[:height]}\">"
-
-    img
-  end
-
-end
-
-
 # Build-specific configuration
 configure :build do
-  # activate :minify_css
+  activate :minify_css
   activate :minify_javascript
 end
-
 
 activate :fjords do |fjords|
   fjords.username = ENV['FJORDS_USERNAME']
   fjords.password = ENV['FJORDS_PASSWORD']
+end
+
+# Since we're using bucket names with dots in them, they fail SSL cert
+# verification. This forces Fog to use path style URLs
+# (s3.amazonaws.com/onbluedot.com) for buckets.
+Fog.credentials = { path_style: true }
+
+activate :sync do |sync|
+  sync.fog_provider = 'AWS'
+  sync.fog_directory = ENV['DEPLOY_BUCKET']
+  sync.fog_region = 'us-west-2'
+  sync.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
+  sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+  sync.existing_remote_files = 'keep'
+  sync.gzip_compression = true
+  sync.after_build = false
 end

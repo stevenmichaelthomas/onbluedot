@@ -3,14 +3,14 @@
   height: $hero-height - 100
   background: $blue-background
   background-repeat: repeat-x
+  overflow: hidden
 
 #stars
   position: absolute
   top: 0
   left: 0
-  right: 0
-  bottom: 0
-  height: $hero-height
+  width: 100%
+  height: $hero-height - 100
 
 .blue-dot
   background-repeat: no-repeat
@@ -31,9 +31,15 @@
     padding-top: 272px - 40
     height: $hero-height - 50
 
+  #stars
+    height: $hero-height - 50
+
 +at-breakpoint($break-desktop)
   .hero
     padding-top: 272px
+    height: $hero-height
+
+  #stars
     height: $hero-height
 
 
